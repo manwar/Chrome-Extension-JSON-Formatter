@@ -27,3 +27,13 @@ Since this is a developer tool, you can load it directly into Chrome:
 2.  Click the **Simple JSON Formatter** icon in your extension toolbar.
 3.  Click the **🪄 (Magic Wand)** button.
 4.  The extension will pull the text from the page and format it automatically.
+
+## Permissions Used
+
+* **activeTab:** To read the content of the page you are currently viewing.
+* **scripting:** To execute the extraction script for the Magic Wand.
+* **clipboardWrite:** To allow the "Copy" button functionality.
+
+## License
+
+This project is licensed under the MIT License.
