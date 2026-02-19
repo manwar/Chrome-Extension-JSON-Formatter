@@ -1,0 +1,31 @@
+name: Create Release Bundle
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Create Zip Bundle
+        run: |
+          zip -r json-formatter-extension.zip . -x "*.git*" ".github/*" ".gitignore" "README.md"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: json-formatter-extension.zip
+          name: Release ${{ github.ref_name }}
+          body: |
+            Automated bundle for version ${{ github.ref_name }}.
+            Download the zip and load it as an unpacked extension in Chrome.
+          draft: false
+          prerelease: false

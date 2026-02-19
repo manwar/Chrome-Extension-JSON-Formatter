@@ -1,0 +1,118 @@
+/* 1. Theme Variables (VS Code Dark Style) */
+:root {
+  --bg: #1e1e1e;
+  --panel-bg: #252526;
+  --text: #d4d4d4;
+  --border: #333;
+  --primary: #007acc;
+  --string: #ce9178;
+  --number: #b5cea8;
+  --keyword: #569cd6;
+  --null: #808080;
+  --error: #f44336;
+  --btn-hover: #3a3d41;
+}
+
+/* 2. Global Layout */
+body {
+  width: 450px; /* Adjusted for better spacing */
+  padding: 20px;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  margin: 0;
+}
+
+h3 { 
+  margin-top: 0; 
+  font-weight: 500; 
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+/* 3. Input & Output Areas */
+textarea, #jsonOutput {
+  width: 100%;
+  background: var(--panel-bg);
+  color: #fff;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 12px;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  box-sizing: border-box;
+  font-size: 13px;
+}
+
+textarea {
+  height: 150px;
+  resize: vertical;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+textarea:focus {
+  border-color: var(--primary);
+}
+
+#jsonOutput {
+  min-height: 150px;
+  max-height: 400px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.5;
+  border: 1px dashed #444;
+}
+
+/* 4. Controls & Buttons */
+.controls {
+  margin: 15px 0;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+button {
+  cursor: pointer;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 3px;
+  background: #3a3d41;
+  color: white;
+  font-size: 12px;
+  transition: background 0.2s;
+}
+
+button.primary { 
+  background: var(--primary); 
+}
+
+button:hover { 
+  background: #4a4d51; 
+}
+
+button.primary:hover {
+  background: #1084d1;
+}
+
+/* 5. Logic Classes */
+.error { 
+  color: #ff8e8e; 
+  background: rgba(244, 67, 54, 0.1);
+  padding: 8px;
+  border-radius: 4px;
+  margin: 10px 0;
+  font-size: 13px; 
+  border-left: 3px solid var(--error);
+}
+
+.hidden { 
+  display: none !important; 
+}
+
+/* 6. Syntax Highlighting (Used by JS) */
+.json-key { color: #9cdcfe; }
+.json-string { color: var(--string); }
+.json-number { color: var(--number); }
+.json-boolean { color: var(--keyword); }
+.json-null { color: var(--null); }

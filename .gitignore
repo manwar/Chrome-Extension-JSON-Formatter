@@ -1,0 +1,10 @@
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
+
+# Ignore your own zip bundles
+*.zip
+
+# Ignore local editor settings
+.vscode/
+.idea/

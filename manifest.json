@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Simple JSON Formatter",
+  "version": "1.0",
+  "description": "Prettify and syntax-highlight JSON instantly.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "activeTab", 
+    "scripting", 
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}

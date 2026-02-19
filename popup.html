@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON Formatter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="container">
+    <h3>Simple JSON Formatter</h3>
+    
+    <textarea id="jsonInput" placeholder="Paste raw JSON here..." spellcheck="false"></textarea>
+    
+    <div class="controls">
+      <button id="formatBtn" class="primary">Format</button>
+      <button id="minifyBtn">Minify</button>
+      <button id="copyBtn">Copy</button>
+      <button id="magicBtn" title="Grab JSON from Page">🪄</button>
+    </div>
+
+    <div id="errorMessage" class="error hidden"></div>
+    <pre id="jsonOutput" class="hidden"></pre>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
